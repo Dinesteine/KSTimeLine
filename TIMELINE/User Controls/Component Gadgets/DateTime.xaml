@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="TIMELINE.User_Controls.Component_Gadgets.DateTime"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TIMELINE.User_Controls.Component_Gadgets"
+             mc:Ignorable="d" MaxHeight="40" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="120"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+            <RadioButton x:Name="EnglishDate" Content="English Date(AD)" FontSize="14" IsChecked="True" VerticalAlignment="Top" Checked="EnglishDate_Checked"/>
+            <RadioButton x:Name="NepaliDate" Grid.Row="1" Content="Nepali Date(BS)" FontSize="14" VerticalAlignment="Top" Checked="NepaliDate_Checked"/>
+
+        </Grid>
+
+
+        <Grid  Grid.Column="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text=" Select Month" HorizontalAlignment="Center" />
+            <ComboBox Grid.Row="1" Name="comboBoxMonthSelection" Margin="5,0,5,0" VerticalAlignment="Center">
+            </ComboBox>
+
+        </Grid>
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Write Year" HorizontalAlignment="Center"/>
+            <TextBox Name="txtBoxYear"  Margin="5,0,5,0" Grid.Row="1" VerticalAlignment="Center" MaxLength="4" 
+                                     PreviewTextInput="TextBox_PreviewTextInput"></TextBox>
+        
+        </Grid>
+    </Grid>
+</UserControl>

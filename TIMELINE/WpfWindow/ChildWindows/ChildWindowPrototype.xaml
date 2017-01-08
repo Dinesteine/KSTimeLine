@@ -1,0 +1,18 @@
+﻿<Window x:Class="TIMELINE.WpfWindow.ChildWindows.ChildWindowPrototype"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TIMELINE.WpfWindow.ChildWindows"
+        mc:Ignorable="d"
+         Height="600" Width="960"  
+        WindowStartupLocation="CenterScreen" MinWidth="960" MinHeight="600" Loaded="Window_Loaded" IsTabStop="True" IsHitTestVisible="True" WindowStyle="ThreeDBorderWindow">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="536*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="titleGrid"></Grid>
+        <Grid Grid.Row="1" x:Name="bodyGrid"></Grid>
+    </Grid>
+</Window>

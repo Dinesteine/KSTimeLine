@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="TIMELINE.User_Controls.Report.MonthalyAttendance"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TIMELINE.User_Controls.Report"
+             xmlns:userControlObj="clr-namespace:TIMELINE.User_Controls.Component_Gadgets"
+             mc:Ignorable="d"  MinWidth="650" MinHeight="600"
+            Loaded="UserControl_Loaded">
+    <Border  BorderBrush="Gray" Margin="4" BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0"/>
+                <RowDefinition Height="241*"/>
+            </Grid.RowDefinitions>
+
+            <Border BorderBrush="Gray"  Grid.Row="1" Margin="4" BorderThickness="1">
+                <Grid Grid.Row="1" Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="500*"/>
+                        <RowDefinition Height="103"/>
+                    </Grid.RowDefinitions>
+                    <Border BorderThickness="0,0,0,2" BorderBrush="#FF0C2BF5" Margin="-5,0,-5,0"></Border>
+                    <Border BorderThickness="0,0,0,2" Grid.Row="1" Margin="-5,0,-5,0" BorderBrush="#FF0C2BF5"></Border>
+
+                    <Grid x:Name="gridDaeTime" Width="370" Grid.Row="0" HorizontalAlignment="Left">
+                            <!--<userControlObj:DateTime></userControlObj:DateTime>-->
+                        </Grid>
+                    <Grid  MinHeight="40" Grid.Row="1" x:Name="gridEmpSection" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,5,0,0">
+                            <!--<userControlObj:EmplySelection></userControlObj:EmplySelection>-->
+                        </Grid>
+                        <Grid  MinHeight="40"  x:Name="gridActionButton" VerticalAlignment="Center" HorizontalAlignment="Right">
+                        <!--<userControlObj:ActionButtons></userControlObj:ActionButtons>-->
+                    </Grid>
+                    <Grid Grid.Row="2" x:Name="gridBodyResult"></Grid>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</UserControl>

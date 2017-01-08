@@ -1,0 +1,133 @@
+﻿<Window x:Class="TIMELINE.WpfWindow.Home_Menu.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TIMELINE.WpfWindow.Home_Menu"
+        mc:Ignorable="d"
+         Title="TIME LINE" Height="768"
+        Width="1366" WindowState="Maximized" WindowStartupLocation="CenterScreen" MinWidth="950" MinHeight="700" HorizontalAlignment="Center" VerticalAlignment="Center" OpacityMask="#FFBD1F1F" BorderBrush="#FFC53A3A" Background="#FFF0F0F0">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File"  FontSize="12" Height="30">
+                <MenuItem Header="Company Information" FontSize="12"   Tag="0" Click="fileMenuSelect"/>
+                <Separator/>
+                <MenuItem Header="Logout 'Admin'" FontSize="12" Click="fileMenuSelect" Tag="1"/>
+                <MenuItem Header="Exit" FontSize="12"  Click="fileMenuSelect" Tag="2"/>
+
+            </MenuItem>
+            <MenuItem Header="Master Setting" FontSize="12">
+                <MenuItem Header="Employee Detail" Tag="0" Click="masterSettingMenuSelect"  FontSize="12px"/>
+                <Separator/>
+                <MenuItem Header="Band" Tag="1" Click="masterSettingMenuSelect" FontSize="12px"/>
+                <MenuItem Header="Branch" FontSize="12px" Tag="2" Click="masterSettingMenuSelect"/>
+                <MenuItem Header="Department" Tag="3" Click="masterSettingMenuSelect" FontSize="12px"/>
+                <MenuItem Header="Designation" FontSize="12px" Tag="4" Click="masterSettingMenuSelect"/>
+                <MenuItem Header="Grade" FontSize="12px" Tag="5" Click="masterSettingMenuSelect"/>
+                <MenuItem Header="Holiday" FontSize="12px" Tag="6" Click="masterSettingMenuSelect"/>
+                <MenuItem Header="Leave" FontSize="12px" Tag="7" Click="masterSettingMenuSelect"/>
+                <Separator/>
+                <MenuItem Header="Week End" FontSize="12px"/>
+                <MenuItem Header="Working Hour" FontSize="12px"/>
+                <Separator/>
+                <MenuItem Header="Sign In Mode Setting" FontSize="12px"/>
+                <MenuItem Header="Change Internal Date/Time" FontSize="12px"/>
+                <Separator/>
+                <MenuItem Header="User Manager" FontSize="12px"/>
+                <MenuItem Header="Change Password" FontSize="12px"/>
+            </MenuItem>
+            <MenuItem Header="Transaction" FontSize="12">
+                <MenuItem Header="Employee Registration" Tag="0" Click="transactionMenuItemSelect" FontSize="12"/>
+                <Separator/>
+                <MenuItem Header="Force Attendance" Tag="1" Click="transactionMenuItemSelect" FontSize="12"/>
+                <MenuItem Header="Force Attendance-Batch" Tag="2" Click="transactionMenuItemSelect" FontSize="12px"/>
+                <Separator/>
+                <MenuItem Header="Leve Management" FontSize="12px">
+                    <MenuItem Header="Leave Application" Tag="0" Click="leaveManagementSubMenuItemSelect" FontSize="12px"/>
+                    <MenuItem Header="Leave Cancellation"  Tag="1" Click="leaveManagementSubMenuItemSelect" FontSize="12px"/>
+                    <MenuItem Header="Negative Leave Form"  Tag="2" Click="leaveManagementSubMenuItemSelect" FontSize="12px"/>
+                    <Separator/>
+                    <MenuItem Header="Approve/Grant Monthly Leave"  Tag="3" Click="leaveManagementSubMenuItemSelect" FontSize="12px"/>
+                    <MenuItem Header="Add Leave"  FontSize="12px"  Tag="4" Click="leaveManagementSubMenuItemSelect"/>
+                    <Separator/>
+                    <MenuItem Header="Leave Adjust"  FontSize="12px"  Tag="5" Click="leaveManagementSubMenuItemSelect"/>
+                    <MenuItem Header="Manual Leave Expiry" FontSize="12px"  Tag="6" Click="leaveManagementSubMenuItemSelect"/>
+
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Travel Entry Slip" Tag="3" Click="transactionMenuItemSelect" FontSize="12px"/>
+                <MenuItem Header="Travel Attendance" Tag="4" Click="transactionMenuItemSelect" FontSize="12px"/>
+                <Separator/>
+                <MenuItem Header="Year Ending" Tag="5" Click="transactionMenuItemSelect" FontSize="12px"/>
+                <Separator/>
+                <MenuItem Header="Out-Branch Attendance" Tag="6" Click="transactionMenuItemSelect" FontSize="12px"/>
+                <Separator/>
+                <MenuItem Header="Forced Weekend/Holidays" Tag="7" Click="transactionMenuItemSelect" FontSize="12px"/>
+                <MenuItem Header="Attendance/Absent Remark" Tag="8" Click="transactionMenuItemSelect" FontSize="12px"/>
+                <MenuItem Header="Office Out/In Remarks" Tag="9" Click="transactionMenuItemSelect" FontSize="12px"/>
+                <MenuItem Header="Personal Out/In Remarks" Tag="10" Click="transactionMenuItemSelect" FontSize="12px"/>
+                <MenuItem Header="Official Training" Tag="11" Click="transactionMenuItemSelect" FontSize="12px"/>
+
+
+            </MenuItem>
+            <MenuItem Header="Report" FontSize="12" >
+                <MenuItem Header="Monthly Attendance" Click="reportMenuselect" Tag="0" FontSize="12px"/>
+                <MenuItem Header="Monthly Travel Report" Tag="1"  FontSize="12px" Click="reportMenuselect"/>
+                <Separator/>
+                <MenuItem Header="Monthly Attendance Summary" Click="reportMenuselect" Tag="2" FontSize="12px"/>
+                <MenuItem Header="Yearly Attendance Summary" Click="reportMenuselect" Tag="3" FontSize="12px"/>
+                <Separator/>
+                <MenuItem Header="Daily Attendance" Click="reportMenuselect" Tag="4" FontSize="12px"/>
+                <MenuItem Header="Daily Absent List" Click="reportMenuselect" Tag="5"  FontSize="12px"/>
+                <Separator/>
+                <MenuItem Header="Leave Reports" FontSize="12px">
+                    <MenuItem Header="Leave Register" Click="LeaveReportSubMenuSelect" Tag="0" FontSize="12px"/>
+                    <MenuItem Header="Monthly Leave Detail" Click="LeaveReportSubMenuSelect" Tag="1" FontSize="12px"/>
+                    <MenuItem Header="Annual Leave Register" Click="LeaveReportSubMenuSelect" Tag="2" FontSize="12px"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Department List" Click="reportMenuselect" Tag="6"  FontSize="12px"/>
+                <MenuItem Header="Employee List" Click="reportMenuselect" Tag="7"  FontSize="12px"/>
+                <MenuItem Header="Employee Detail" Click="reportMenuselect" Tag="8"  FontSize="12px"/>
+                <MenuItem Header="Employee List(Gradewise)" Click="reportMenuselect" Tag="9"  FontSize="12px"/>
+                <MenuItem Header="Official Training Report" Click="reportMenuselect" Tag="10"  FontSize="12px"/>
+                <Separator/>
+                <MenuItem Header="Attendance Summary(Daywise)" Click="reportMenuselect" Tag="11"  FontSize="12px"/>
+                <MenuItem Header="Hours Worked(Daywise)" FontSize="12px">
+                    <MenuItem Header="Summary Report" Tag="0" Click="hoursworkedSubMenuSelect" FontSize="12px"/>
+                    <MenuItem Header="Detail Report" Tag="1" Click="hoursworkedSubMenuSelect" FontSize="12px"/>
+
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Monthly Late Report" Click="reportMenuselect" Tag="12"  FontSize="12px"/>
+                <MenuItem Header="Monthly Office Out/In" Click="reportMenuselect" Tag="13"  FontSize="12px"/>
+                <MenuItem Header="Monthly Personal Out/In" Click="reportMenuselect" Tag="14"  FontSize="12px"/>
+                <MenuItem Header="Monthly Band Report" Click="reportMenuselect" Tag="15"  FontSize="12px"/>
+                <Separator/>
+                <MenuItem Header="Time Logs" FontSize="12px">
+                    <MenuItem Header="TimeLog-Monthly" Click="timelogSubMenuSelect" Tag="0"  FontSize="12px"/>
+                    <MenuItem Header="TimeLog-Daily" Click="timelogSubMenuSelect" Tag="1" FontSize="12px"/>
+
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Data Utility" FontSize="12">
+                <MenuItem Header="Backup DataBase"  FontSize="12px"/>
+                <MenuItem Header="Restore DataBase"  FontSize="12px"/>
+                <Separator/>
+                <MenuItem Header="Download Data"  FontSize="12px"/>
+            </MenuItem>
+            <MenuItem Header="Device Setting" FontSize="12">
+                <MenuItem Header="Address Setting"  FontSize="12px"/>
+                <MenuItem Header="Personal Map"  FontSize="12px"/>
+                <MenuItem Header="CardId-Employee Map"  FontSize="12px"/>
+            </MenuItem>
+            <MenuItem Header="Windows" FontSize="12"/>
+            <MenuItem Header="Help" FontSize="12"/>
+        </Menu>
+        <Canvas Background="Transparent" x:Name="MyCanvas" DockPanel.Dock="Top">
+
+        </Canvas>
+
+
+    </DockPanel>
+</Window>

@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="TIMELINE.User_Controls.Component_Gadgets.ActionButtons"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TIMELINE.User_Controls.Component_Gadgets"
+             mc:Ignorable="d" MinHeight="40" MaxHeight="45" >
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="40"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Column="0" Grid.Row="0" Source="/TIMELINE;component/Resources/Images/Button Action Icons/play.png" Stretch="Uniform">
+        </Image>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="LOAD" TextAlignment="Center" FontSize="10"/>
+        <Button Tag="0" Click="ActionButtonTapped_Click" Grid.Column="0" Grid.RowSpan="2" Grid.Row="0" BorderBrush="{x:Null}">
+            <Button.Background>
+                <SolidColorBrush Color="Black" Opacity="0.02"/>
+            </Button.Background>
+        </Button>
+
+        <Image Grid.Column="2" Grid.Row="0" Source="/TIMELINE;component/Resources/Images/Button Action Icons/preview.png" Stretch="Uniform">
+        </Image>
+        <TextBlock Grid.Column="2" Grid.Row="1" Text="PREVIEW" TextAlignment="Center" FontSize="10"/>
+        <Button Tag="1" Click="ActionButtonTapped_Click" Grid.Column="2" Grid.RowSpan="2" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}"/>
+
+        <Image Grid.Column="4" Grid.Row="0" Source="/TIMELINE;component/Resources/Images/Button Action Icons/print.png" Stretch="Uniform">
+        </Image>
+        <TextBlock Grid.Column="4" Grid.Row="1" Text="PRINT" TextAlignment="Center" FontSize="10"/>
+        <Button Tag="2" Click="ActionButtonTapped_Click" Grid.Column="4" Grid.RowSpan="2" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}"/>
+
+        <Image Grid.Column="6" Grid.Row="0" Source="/TIMELINE;component/Resources/Images/Button Action Icons/settings.png" Stretch="Uniform">
+        </Image>
+        <TextBlock Grid.Column="6" Grid.Row="1" Text="SETINGS" TextAlignment="Center" FontSize="10"/>
+        <Button Tag="3" Click="ActionButtonTapped_Click" Grid.Column="6" Grid.RowSpan="2" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}"/>
+
+        <Image Grid.Column="8" Grid.Row="0" Source="/TIMELINE;component/Resources/Images/Button Action Icons/Undo-icon.png" Stretch="Uniform">
+        </Image>
+        <TextBlock Grid.Column="8" Grid.Row="1" Text="UNDO" TextAlignment="Center" FontSize="10"/>
+        <Button Tag="4" Click="ActionButtonTapped_Click" Grid.Column="8" Grid.RowSpan="2" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}"/>
+
+    </Grid>
+</UserControl>

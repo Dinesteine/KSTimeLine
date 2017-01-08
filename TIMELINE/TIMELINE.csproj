@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC09A82C-2ACE-4C50-9223-7E04C9EE8A6F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TIMELINE</RootNamespace>
+    <AssemblyName>TIMELINE</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFControls">
+      <HintPath>C:\Users\mohsn\Downloads\WPFMwiWindows_Src\WPFMwiWindows\WPFControls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App Config\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App Config\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Enum\Enums.cs" />
+    <Compile Include="Manager\Database\DataBaseHelper.cs" />
+    <Compile Include="Manager\Database\SqlViewHelper.cs" />
+    <Compile Include="Manager\Database\StoreProcedureHelper.cs" />
+    <Compile Include="Manager\EmployeeListManager.cs" />
+    <Compile Include="Manager\MasterSettings\Band_MasterSetting.cs" />
+    <Compile Include="Manager\Report\MonthlyAttendanceHelper.cs" />
+    <Compile Include="Model\Database\SqlViewModels\DepartmentListModel.cs" />
+    <Compile Include="Model\Database\SqlViewModels\EmpListModel.cs" />
+    <Compile Include="Model\Database\SqlViewModels\GradeTypeListModel.cs" />
+    <Compile Include="Model\MasterSettings\Band_Model.cs" />
+    <Compile Include="Model\Report\EmployeeDailyAbsentReportModel\EmployeeDailyAbsentReportModel.cs" />
+    <Compile Include="Model\Report\EmployeeList_Department_Wise_Model\EmployeeList_Department_Wise_Model.cs" />
+    <Compile Include="Model\Report\Employee_list_gradewise_data_model\Employee_list_gradewise_data_model.cs" />
+    <Compile Include="Model\Report\EmployyeDailyAttendacnceReportModel\EmployyeDailyAttendacnceReportModel.cs" />
+    <Compile Include="Model\Report\LeaveRegister\AnnualLeaveRegisterModel.cs" />
+    <Compile Include="Model\Report\LeaveRegister\LeaveRegisterModel.cs" />
+    <Compile Include="Model\Report\Monthly Attendance\MonthlyAttendanceforGrid.cs" />
+    <Compile Include="Model\Report\Time Log\TimeLogDailyModel.cs" />
+    <Compile Include="Model\Report\Time Log\TimeLogMonthlyModel.cs" />
+    <Compile Include="Universal Statics\Constants.cs" />
+    <Compile Include="Universal Statics\SqlParameters.cs" />
+    <Compile Include="User Controls\Component Gadgets\ActionButtons.xaml.cs">
+      <DependentUpon>ActionButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Component Gadgets\DataGridWithHeader.xaml.cs">
+      <DependentUpon>DataGridWithHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Component Gadgets\DateTime.xaml.cs">
+      <DependentUpon>DateTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Component Gadgets\EmplySelection.xaml.cs">
+      <DependentUpon>EmplySelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Master Settings\Bandh.xaml.cs">
+      <DependentUpon>Bandh.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Report\MonthalyAttendance.xaml.cs">
+      <DependentUpon>MonthalyAttendance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfWindow\ChildWindows\ChildWindowPrototype.xaml.cs">
+      <DependentUpon>ChildWindowPrototype.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfWindow\Menu\TesDeviceConnected.xaml.cs">
+      <DependentUpon>TesDeviceConnected.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfWindow\testW.xaml.cs">
+      <DependentUpon>testW.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DBTRAX_DATADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBTRAX_DATADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enum\Device\ClearFlag.cs" />
+    <Compile Include="Manager\Device\DeviceManipulator.cs" />
+    <Compile Include="Manager\Device\UniversalStatic.cs" />
+    <Compile Include="Manager\Device\ZkemClient.cs" />
+    <Compile Include="Model\Device\DeviceTimeInfo.cs" />
+    <Compile Include="Model\Device\MachineInfo.cs" />
+    <Compile Include="Model\Device\UserIDInfo.cs" />
+    <Compile Include="Model\Device\UserInfo.cs" />
+    <Compile Include="WpfWindow\Menu\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Data\DBTRAX_DATADataSet.xsc">
+      <DependentUpon>DBTRAX_DATADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DBTRAX_DATADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBTRAX_DATADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\DBTRAX_DATADataSet.xss">
+      <DependentUpon>DBTRAX_DATADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App Config\App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="User Controls\Component Gadgets\ActionButtons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\Component Gadgets\DataGridWithHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\Component Gadgets\DateTime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\Component Gadgets\EmplySelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\Master Settings\Bandh.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\Report\MonthalyAttendance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfWindow\ChildWindows\ChildWindowPrototype.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfWindow\Menu\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfWindow\Menu\TesDeviceConnected.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfWindow\testW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Library\" />
+    <Folder Include="WpfWindow\Device\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\DBTRAX_DATA.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DBTRAX_DATA_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>DBTRAX_DATA.mdf</DependentUpon>
+    </Content>
+    <Resource Include="Resources\Images\Button Action Icons\Undo-icon.png" />
+    <Resource Include="Resources\Images\Button Action Icons\excel.png" />
+    <Resource Include="Resources\Images\Button Action Icons\play.png" />
+    <Resource Include="Resources\Images\Button Action Icons\preview.png" />
+    <Resource Include="Resources\Images\Button Action Icons\print.png" />
+    <Resource Include="Resources\Images\Button Action Icons\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="zkemkeeper">
+      <Guid>{FE9DED34-E159-408E-8490-B720A5E632C7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

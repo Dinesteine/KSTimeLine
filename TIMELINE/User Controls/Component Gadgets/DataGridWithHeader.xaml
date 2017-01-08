@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="TIMELINE.User_Controls.Component_Gadgets.DataGridWithHeader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TIMELINE.User_Controls.Component_Gadgets"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Grid.Row="1"  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="359*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal"  x:Name="stackPanelHeader" Margin="5,0,0,0" >
+            <Border x:Name="Label1" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch">
+                <TextBlock Text=""/>
+            </Border>
+            <Border x:Name="Label2" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch">
+                <TextBlock Text="Sign In"/>
+            </Border>
+            <Border x:Name="Label3" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch">
+                <TextBlock Text="Sign Out"/>
+            </Border>
+            <Border x:Name="Label4" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch">
+                <TextBlock Text="Duration"/>
+            </Border>
+            <Border x:Name="Label5" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch">
+                <TextBlock Text="Lunch Out"/>
+            </Border>
+            <Border x:Name="Label6" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch">
+                <TextBlock Text="Lunch In"/>
+            </Border>
+            <Border x:Name="Label7" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch">
+                <TextBlock Text="Duration"/>
+            </Border>
+            <Border x:Name="Label8" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch">
+                <TextBlock Text="Lunch"/>
+            </Border>
+            <Border x:Name="Label9" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch">
+                <TextBlock Text="Duration"/>
+            </Border>
+        </StackPanel>
+        <DataGrid   Grid.Row="1" Name="dataGridMonthlyAttendance"
+			   AutoGenerateColumns="False"
+			CanUserReorderColumns="False" ItemsSource="{Binding MonthlyAttendanceforGrid}" IsSynchronizedWithCurrentItem="True"
+			LayoutUpdated="LayoutUpdated" FrozenColumnCount="2">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn  Header="Date" Binding="{Binding date}"  Width="100" x:Name="c1" />
+                <DataGridTextColumn Header="Worked Hr." Binding="{Binding workedHr}" Width="100" x:Name="c2" />
+                <DataGridTextColumn Header="Time" Binding="{Binding signinTime}" Width="100" x:Name="c3" />
+                <DataGridTextColumn Header="In Diff" Binding="{Binding signinInDiff}" Width="100" x:Name="c4" />
+                <DataGridTextColumn Header="Mode" Binding="{Binding signinMode}" Width="100" x:Name="c5" />
+                <DataGridTextColumn Header="Remarks" Binding="{Binding signinRemarks}" Width="100" x:Name="c6" />
+                <DataGridTextColumn Header="Time" Binding="{Binding signoutTime}" Width="100" x:Name="c7" />
+                <DataGridTextColumn Header="Out Diff" Binding="{Binding signoutOutDiff}" Width="100" x:Name="c8" />
+                <DataGridTextColumn Header="Mode" Binding="{Binding signoutMode}" Width="100" x:Name="c9" />
+                <DataGridTextColumn Header="Remarks" Binding="{Binding signoutRemarks}" Width="100" x:Name="c10" />
+                <DataGridTextColumn Header="In - Out" Binding="{Binding durationInOut}" Width="100" x:Name="c11" />
+                <DataGridTextColumn Header="Time" Binding="{Binding launchoutTime}" Width="100" x:Name="c12" />
+                <DataGridTextColumn Header="Mode" Binding="{Binding launchoutMode}" Width="100" x:Name="c13" />
+                <DataGridTextColumn Header="Remarks" Binding="{Binding launchoutRemarks}" Width="100" x:Name="c14" />
+                <DataGridTextColumn Header="Time" Binding="{Binding launchinTime}" Width="100" x:Name="c15" />
+                <DataGridTextColumn Header="Mode" Binding="{Binding launchinMode}" Width="100" x:Name="c16" />
+                <DataGridTextColumn Header="Remarks" Binding="{Binding launchinRemarks}" Width="100" x:Name="c17" />
+                <DataGridTextColumn Header="L Out - L In" Binding="{Binding durationLaunchOutLaunchIn}" Width="100" x:Name="c18" />
+                <DataGridTextColumn Header="Time Diff" Binding="{Binding launchTimeDiff}" Width="100" x:Name="c19" />
+                <DataGridTextColumn Header="Personal Out" Binding="{Binding durationPersonalOut}" Width="100" x:Name="c20" />
+                <DataGridTextColumn Header="Extra L/T" Binding="{Binding durationExtraLT}" Width="100" x:Name="c21" />
+                <DataGridTextColumn Header="Office Out" Binding="{Binding durationOfficeOut}" Width="100" x:Name="c22" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+
+</UserControl>
